@@ -4,20 +4,20 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "cat.numancia.pong_sergi_curtu"
         versionCode = "2" 
-        version     = "0.0.02" >
+        version     = "2.1.0" >
 	
 	<!-- versionCode is optional and Android only -->
 
 	
 
-   <name>Pong SCB</name>
+   <name>BloodPong</name>
 
    <description>
-       Un pong fet per alumnes de 4t del Numància
+      El joc del pong amb imatges del Bloodborne.
     </description>
 
-    <author href="https://numancia.cat/intranet" email="sergi.curtu@numancia.cat">
-       Sergi Curtu
+    <author href="https://numancia.cat/intranet" email="jolivera73@iesnumancia.cat">
+       Joel Olivera
     </author>
 
 	<content src="index.html"/>
