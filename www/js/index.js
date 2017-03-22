@@ -60,5 +60,39 @@ function draw(amplada_pantalla_CSS,alcada_pantalla_CSS,posicio_x_bola,posicio_y_
 	        ctx.strokeRect(50,50,50,50);
 		
 		
-		
+	 
 }
+
+//rectangulo canvas
+	    <canvas id="canvas"></canvas>
+	    <html>
+  <head>
+  <head>
+   <body>
+      <canvas id="tutorial" width="150" height="150" style=" border: 4px solid #00FF80"></canvas>
+      <script type="text/javascript">
+         var c=document.getElementById('tutorial');
+         var ctx=c.getContext('2d');
+
+          // Formas rectangulares
+          ctx.fillRect(25,25,100,100);
+          ctx.clearRect(45,45,60,60);
+          ctx.strokeRect(50,50,50,50);
+       
+    </script>
+    <div>
+  <body>
+<html>
+	    
+	    
+	    
+	    
+        	<style>
+        	
+        		html, body {
+					  width:  100%;
+					  height: 100%;
+					  margin: 0px;
+				   }
+        		
+        	</style>	
