@@ -60,5 +60,5 @@ function draw(amplada_pantalla_CSS,alcada_pantalla_CSS,posicio_x_bola,posicio_y_
 	        ctx.strokeRect(50,50,50,50);
 		
 		
-	 
-}	
+		
+}
