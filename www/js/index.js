@@ -33,11 +33,15 @@ $(document).on('deviceready', function() {
 	}, false); 
 	
 	document.addEventListener('touchstart', function(e) {
-	     alert("Clicat") ;
+	     //alert("Clicat") ;
 	});	
 	
 	document.addEventListener('touchmove', function(e) {
-	      alert("has arrastrat el dit");
+		
+		var touchobj = e.changedTouches[0] ; // referència al primer punt tocat (pex: el primner dit)
+		startx = parseInt(touchobj.clientX) ; // quina és la posició x en referència al costat esquerra de la pantalla
+		starty = parseInt(touchobj.clientY) ; // la pos Y en ref. a la part superior
+	        alert("has arrastrat el dit" + "start_x:" + starx + "start_y:" + starty);
 	 });
 	
 	var nivell = 1 ;
