@@ -65,10 +65,13 @@ $(document).on('deviceready', function() {
 function draw(startx,starty) {
 	
 		// alert("cridada la funció DRAW");
-	
+		
 		var canvas = document.getElementById('canvas');
 		var ctx = canvas.getContext('2d');
 		
+		// en primier lloc he de netejar el canvas
+		canvas.width=canvas.width;
+	
 		 // Formas rectangulares
           	ctx.fillRect(startx,starty,100,100);
           
@@ -76,9 +79,3 @@ function draw(startx,starty) {
 		
 		
 }
-
-//Borrar
-var limpiar = document.getElementById("limpiar");
-limpiar.addEventListener("click",function(){
-	canvas.width=canvas.width;
-},false);
