@@ -78,12 +78,7 @@ function draw(startx,starty) {
 }
 
 //Borrar
-function eliminarElemento(id){
-	imagen = document.getElementById('canvas');	
-	if (!imagen){
-		alert("El elemento selecionado no existe");
-	} else {
-		padre = imagen.parentNode;
-		padre.removeChild(imagen);
-	}
-}
+var limpiar = document.getElementById("limpiar");
+limpiar.addEventListener("click",function(){
+	canvas.width=canvas.width;
+},false);
