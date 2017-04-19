@@ -136,10 +136,14 @@ function dibuixar_bola(ctx,posicio_x_bola, posicio_y_bola, mida_x_bola) {
 	   ctx.strokeStyle = 'yellow';
 	   ctx.stroke();
 	ctx.closePath();
-			
-	
-	
 }
+
+function dibuixar_rectangle_dreta (ctx,posicio_x_bola, posicio_y_bola, mida_x_bola) {
+	
+	ctx.fillRect(10,10,200,200);
+	ctx.fillStyle="#FFFFFF";
+}
+
 function draw() {
 	
 		// alert("cridada la funció DRAW");
