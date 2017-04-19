@@ -138,10 +138,18 @@ function dibuixar_bola(ctx,posicio_x_bola, posicio_y_bola, mida_x_bola) {
 	ctx.closePath();
 }
 
-function dibuixar_rectangle_dreta (ctx,posicio_x_bola, posicio_y_bola, mida_x_bola) {
+function dibuixar_rectangle_dreta(ctx) {
 	
-	ctx.fillRect(10,10,200,200);
 	ctx.fillStyle="#FFFFFF";
+	ctx.fillRect(30,30,200*100);
+	
+}
+
+function dibuixar_rectangle_esquerra(ctx) {
+	
+	ctx.fillStyle="#33FFFF";
+	ctx.fillRect(300,300,200*100);
+	
 }
 
 function draw() {
@@ -200,7 +208,9 @@ function draw() {
 				ctx.fillRect(340, 20, 30, 30); 	// superior esquerra
 				ctx.fillRect(340, 600, 40, 40); // superior dreta
 			*/
-					
+			
+			dibuixar_rectangle_dreta(ctx);
+		        dibuixar_rectangle_esquerra(ctx);
 			dibuixar_bola(ctx,posicio_x_bola, posicio_y_bola, mida_x_bola);
 			
 			window.pos_x_bola = window.pos_x_bola + window.dx ;
