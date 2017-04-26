@@ -22,18 +22,6 @@ $(document).on('deviceready', function() {
      window.marcador_D = 0 ;	
 	
 	
-     /////////////////////////////////////////////////////////
-     // canvas_fons  //
-     var fons = document.getElementById('canvas_fons');
-     var ctx_fons = fons.getContext('2d');
-	
-	var imageObj = new Image();
-	imageObj.onload = function() {
-		ctx_fons.drawImage(imageObj, 0, 0, 360, 640);
-	};
-	imageObj.src = 'img/pong_fons.png';
-	
-	
      // REDIMENSIONEM EL CANVAS
      var canvas = document.getElementById('canvas');
      var ctx = canvas.getContext('2d');
@@ -48,12 +36,12 @@ $(document).on('deviceready', function() {
 	window.centre_y = centre_y ;
 	
 	
-	ctx.font="30px Verdana";
+	ctx.font="30px Eurostile";
 	
 	// Create gradient
 	var gradient=ctx.createLinearGradient(0,0,canvas.width,0);
-	gradient.addColorStop("0","maroon");
-	gradient.addColorStop("0.5","firebrick");
+	gradient.addColorStop("0","magenta");
+	gradient.addColorStop("0.5","blue");
 	gradient.addColorStop("1.0","red");
 	
 	// Fill with gradient
@@ -65,8 +53,8 @@ $(document).on('deviceready', function() {
 	 ctx.translate(centre_x,centre_y); // el centre de gir és la meitat de la pantalla
 	 ctx.rotate(Math.PI/2);  //  Math.PI == 180º => -(3/2) * 180 = -270  - que seria el mateix que +90 -> 180 / 2 ) 
 	 ctx.textAlign = "center";
-	 ctx.fillText("Gira la pantalla :v", 100, 90);
-	 ctx.fillText("y presiona per comenzar, escoria", 100, 130);
+	 ctx.fillText("Gira la pantalla ...", 100, 90);
+	 ctx.fillText("i toca per començar", 100, 130);
 	 ctx.restore();
 	
 	// ctx.fillText("Toca la pantalla per començar",10,90);
@@ -88,15 +76,15 @@ $(document).on('deviceready', function() {
 	// posicio_x_pala_E,posicio_y_pala_E,mida_x_pala_E,mida_y_pala_E
 	// posicio_x_pala_D,posicio_y_pala_D,mida_x_pala_D,mida_y_pala_D
 	
-	// Vermell
-	window.color_pala_E = '#FF0000' ;
+	// vermell
+	window.color_pala_E = '#FA5858' ;
 	window.posicio_x_pala_E = 200  ;
 	window.posicio_y_pala_E = 10  ;
 	window.mida_x_pala_E =  100 ;
 	window.mida_y_pala_E =  20 ;
 	
-	// Rosa
-	window.color_pala_D = '#FF007F';
+	// verd
+	window.color_pala_D = '#ACFA58' ;
 	window.posicio_x_pala_D = 220  ;
 	window.posicio_y_pala_D = 610  ;
 	window.mida_x_pala_D =  100 ;
@@ -202,8 +190,8 @@ function dibuixar_bola(ctx,posicio_x_bola, posicio_y_bola, mida_x_bola) {
 
 function marcador(ctx) {
 	
-	 ctx.font="60px Avalon Quest";
-	 ctx.fillStyle='#990000'; // color 
+	 ctx.font="60px Eurostile";
+	 ctx.fillStyle='#FF0000'; // color 
 	 ctx.save();
 		 ctx.translate(window.centre_x,window.centre_y); // el centre de gir és la meitat de la pantalla
 		 ctx.rotate(Math.PI/2);  //  Math.PI == 180º => -(3/2) * 180 = -270  - que seria el mateix que +90 -> 180 / 2 ) 
@@ -261,7 +249,7 @@ function draw() {
 			var alcada_pantalla_CSS = window.innerWidth ;
      			var amplada_pantalla_CSS = (window.innerHeight)+10 ;
 			canvas.width=canvas.width;
-			canvas.style.backgroundColor = 'transparent' ;
+			$('#canvas').css('background-color', 'rgba(0,0,0,0.2)');
 			ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
 			
 			// linia 1/2 camp
@@ -276,6 +264,17 @@ function draw() {
 			
 			marcador(ctx);
 			
+			// canvas_fons  //
+			var fons = document.getElementById('canvas_fons');
+			var ctx_fons = fons.getContext('2d');
+
+				var imageObj = new Image();
+				imageObj.onload = function() {
+					ctx_fons.drawImage(imageObj,-200, -200, 360, 640);
+				};
+				imageObj.src = 'img/pong_fons.png';
+			
+			
 		}
 	
 		if (estat_joc == 1) 
@@ -285,7 +284,7 @@ function draw() {
 			var alcada_pantalla_CSS = window.innerWidth ;
      		        var amplada_pantalla_CSS = (window.innerHeight)+10 ;
 			canvas.width=canvas.width;
-			canvas.style.backgroundColor = 'transparent' ;
+			$('#canvas').css('background-color', 'rgba(255,255,255,0.2)');
 			ctx.clearRect(0,0,window.innerWidth,window.innerHeight);
 			
 			// linia 1/2 camp
