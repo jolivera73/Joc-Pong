@@ -40,9 +40,9 @@ $(document).on('deviceready', function() {
 	
 	// Create gradient
 	var gradient=ctx.createLinearGradient(0,0,canvas.width,0);
-	grd.addColorStop(0,   "crimson");
-        grd.addColorStop(0.5, "maroon");
-        grd.addColorStop(1,   "black");
+	gradient.addColorStop("0","crimson");
+	gradient.addColorStop("0.5","maroon");
+	gradient.addColorStop("1.0","black");
 	
 	// Fill with gradient
 	ctx.fillStyle=gradient;
